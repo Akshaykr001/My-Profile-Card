@@ -1,0 +1,141 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8eaf2;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ── Card ── */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #faf9f6;
+  border-radius: 28px;
+  padding: 40px 36px 36px;
+  width: 340px;
+  text-align: center;
+}
+
+/* ── Profile Image ── */
+.profile-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* purple → blue gradient ring */
+  padding: 3px;
+  background:beige
+  background-clip: padding-box;
+  /* simulate ring using outline trick */
+  box-shadow: 0 0 0 3px #faf9f6, 0 0 0 6px transparent;
+  /* actual gradient border via outline workaround */
+  border: 3px solid transparent;
+  /* gradient border using background-origin trick */
+  background-image: linear-gradient(#faf9f6, #faf9f6),
+                    linear-gradient(135deg, #a78bfa, #60a5fa);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 18px;
+}
+
+.profile-img h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1a1f3c;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+}
+
+.role {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #8a90b0;
+}
+
+/* ── Bio ── */
+.Profile-details {
+  margin: 14px 0 24px;
+}
+
+.bio {
+  font-size: 0.90rem;
+  color: #9398b8;
+  line-height: 1.6;
+}
+
+/* ── Social Icons ── */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6ebde8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.70rem;
+  font-weight: 700;
+  color: #1a1f3c;
+  box-shadow:
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    6px 6px 14px rgba(160, 160, 170, 0.25),
+    -2px -2px 8px #ffffff;
+}
+
+.social-icons a i {
+  font-size: 1.1rem;
+}
+
+/* ── Follow Button ── */
+.btn button {
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-radius: 50px;
+  background-color: #60a5fa;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 3px 10px grey;
+}
+
+
+.btn button:active {
+  transform: scale(0.98);
+}
