@@ -1,4 +1,4 @@
-/* ── Reset & Base ── */
+/*Initial Defaults*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +14,7 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-/* ── Card ── */
+/*Card*/
 .container {
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ body {
   text-align: center;
 }
 
-/* ── Profile Image ── */
+/*Profile Image*/
 .profile-img {
   display: flex;
   flex-direction: column;
@@ -42,15 +42,14 @@ body {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  /* purple → blue gradient ring */
   padding: 3px;
   background:beige
   background-clip: padding-box;
-  /* simulate ring using outline trick */
+  /* ring outline */
   box-shadow: 0 0 0 3px #faf9f6, 0 0 0 6px transparent;
-  /* actual gradient border via outline workaround */
+  
   border: 3px solid transparent;
-  /* gradient border using background-origin trick */
+  
   background-image: linear-gradient(#faf9f6, #faf9f6),
                     linear-gradient(135deg, #a78bfa, #60a5fa);
   background-origin: border-box;
@@ -72,7 +71,7 @@ body {
   color: #8a90b0;
 }
 
-/* ── Bio ── */
+/* Bio */
 .Profile-details {
   margin: 14px 0 24px;
 }
@@ -83,7 +82,7 @@ body {
   line-height: 1.6;
 }
 
-/* ── Social Icons ── */
+/* Social Icons  */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -118,7 +117,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* ── Follow Button ── */
+/*  Follow Button  */
 .btn button {
   width: 100%;
   padding: 16px 0;
